@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-bg: #0d0d0f;
+  --color-surface: #1a1a1f;
+  --color-border: #2a2a38;
+  --color-text: #e8e8f0;
+  --color-text-muted: #6868a0;
+  --color-accent: #9090c0;
+  --color-accent-hover: #b0b0e0;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Global smooth theme transitions — but NOT on framer-motion elements */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-inter), sans-serif;
+  transition: background-color 0.7s ease, color 0.5s ease;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
+
+/* Selection */
+::selection {
+  background: var(--color-accent);
+  color: var(--color-bg);
+}
+
+/* Custom utility classes */
+.text-theme { color: var(--color-text); }
+.text-muted { color: var(--color-text-muted); }
+.text-accent { color: var(--color-accent); }
+.bg-theme { background-color: var(--color-bg); }
+.bg-surface { background-color: var(--color-surface); }
+.border-theme { border-color: var(--color-border); }
